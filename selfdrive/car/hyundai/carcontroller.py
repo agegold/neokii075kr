@@ -70,7 +70,7 @@ class CarController():
     self.turning_signal_timer = 0
     self.lkas_button_on = True
     self.longcontrol = False
-    self.flashBlinker = False
+    #self.flashBlinker = False
 
   def update(self, enabled, CS, frame, actuators, pcm_cancel_cmd, visual_alert,
              left_lane, right_lane, left_lane_depart, right_lane_depart):
