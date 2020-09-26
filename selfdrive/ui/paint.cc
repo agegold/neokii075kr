@@ -459,7 +459,7 @@ static void bb_ui_draw_measures_left(UIState *s, int bb_x, int bb_y, int bb_w ) 
 
   //add visual radar relative distance
   if (true) {
-    char val_str[16];
+    char val_str[10];
     char uom_str[6];
     NVGcolor val_color = nvgRGBA(255, 255, 255, 200);
     if (scene->lead_status) {
@@ -486,7 +486,7 @@ static void bb_ui_draw_measures_left(UIState *s, int bb_x, int bb_y, int bb_w ) 
 
   //add visual radar relative speed
   if (true) {
-    char val_str[16];
+    char val_str[10];
     char uom_str[6];
     NVGcolor val_color = nvgRGBA(255, 255, 255, 200);
     if (scene->lead_status) {
@@ -521,7 +521,7 @@ static void bb_ui_draw_measures_left(UIState *s, int bb_x, int bb_y, int bb_w ) 
 
   //add  steering angle
   if (true) {
-    char val_str[16];
+    char val_str[10];
     char uom_str[6];
     NVGcolor val_color = nvgRGBA(0, 255, 0, 200);
       //show Orange if more than 30 degrees
@@ -545,7 +545,7 @@ static void bb_ui_draw_measures_left(UIState *s, int bb_x, int bb_y, int bb_w ) 
 
   //add  desired steering angle
   if (true) {
-    char val_str[16];
+    char val_str[10];
     char uom_str[6];
     NVGcolor val_color = nvgRGBA(255, 255, 255, 200);
     if (scene->engaged) {
@@ -717,28 +717,28 @@ static void drawLeftDebug(UIState *s)
     ///////////
     // LQR
 
-    snprintf(str, sizeof(str), "I: %.3f", scene->lqr.getI());
-    ui_draw_text(s->vg, text_x, y, str, 25 * 2.5, COLOR_WHITE_ALPHA(200), s->font_sans_regular);
+ //   snprintf(str, sizeof(str), "I: %.3f", scene->lqr.getI());
+ //   ui_draw_text(s->vg, text_x, y, str, 25 * 2.5, COLOR_WHITE_ALPHA(200), s->font_sans_regular);
 
-    y += height;
-    snprintf(str, sizeof(str), "LQR: %.3f", scene->lqr.getLqrOutput());
-    ui_draw_text(s->vg, text_x, y, str, 25 * 2.5, COLOR_WHITE_ALPHA(200), s->font_sans_regular);
+ //   y += height;
+ //   snprintf(str, sizeof(str), "LQR: %.3f", scene->lqr.getLqrOutput());
+ //   ui_draw_text(s->vg, text_x, y, str, 25 * 2.5, COLOR_WHITE_ALPHA(200), s->font_sans_regular);
 
-    y += height;
-    snprintf(str, sizeof(str), "O: %.3f", scene->lqr.getOutput());
-    ui_draw_text(s->vg, text_x, y, str, 25 * 2.5, COLOR_WHITE_ALPHA(200), s->font_sans_regular);
+ //   y += height;
+ //   snprintf(str, sizeof(str), "O: %.3f", scene->lqr.getOutput());
+ //   ui_draw_text(s->vg, text_x, y, str, 25 * 2.5, COLOR_WHITE_ALPHA(200), s->font_sans_regular);
 
-    y += height;
-    snprintf(str, sizeof(str), "CURV: %.3f", scene->pCurvature * 1000.);
-    ui_draw_text(s->vg, text_x, y, str, 25 * 2.5, COLOR_WHITE_ALPHA(200), s->font_sans_regular);
+ //   y += height;
+ //   snprintf(str, sizeof(str), "CURV: %.3f", scene->pCurvature * 1000.);
+ //   ui_draw_text(s->vg, text_x, y, str, 25 * 2.5, COLOR_WHITE_ALPHA(200), s->font_sans_regular);
 
-    y += height;
-    snprintf(str, sizeof(str), "sR: %.3f", scene->lp_steerRatio);
-    ui_draw_text(s->vg, text_x, y, str, 25 * 2.5, COLOR_WHITE_ALPHA(200), s->font_sans_regular);
+ //   y += height;
+ //   snprintf(str, sizeof(str), "sR: %.3f", scene->lp_steerRatio);
+ //   ui_draw_text(s->vg, text_x, y, str, 25 * 2.5, COLOR_WHITE_ALPHA(200), s->font_sans_regular);
 
-    y += height;
-    snprintf(str, sizeof(str), "Lane: %.2f, %.2f", scene->l_prob, scene->r_prob);
-    ui_draw_text(s->vg, text_x, y, str, 25 * 2.5, COLOR_WHITE_ALPHA(200), s->font_sans_regular);
+ //   y += height;
+ //   snprintf(str, sizeof(str), "Lane: %.2f, %.2f", scene->l_prob, scene->r_prob);
+ //   ui_draw_text(s->vg, text_x, y, str, 25 * 2.5, COLOR_WHITE_ALPHA(200), s->font_sans_regular);
 }
 
 
